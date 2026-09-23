@@ -7,7 +7,8 @@
 }
 .box {
   box-sizing: border-box;
+  border: 1px solid black;
   display: flex;
-  width: 31.25px;
-  height: 31.25px;
+  width: 6.25%;
+  height: 6.25%;
 }
