@@ -6,9 +6,11 @@ for (let i = 0; i < 16 ** 2; i++) {
 }
 
 const boxes = document.querySelectorAll(".box");
-
-boxes.forEach((div) => {
-  div.addEventListener("mouseover", () => {
-    div.style.backgroundColor = "red";
+function drawingFunction() {
+  boxes.forEach((div) => {
+    div.addEventListener("mouseover", () => {
+      div.style.backgroundColor = "red";
+    });
   });
-});
+}
+drawingFunction();
