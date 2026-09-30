@@ -10,7 +10,7 @@ const boxes = document.querySelectorAll(".box");
 function drawingFunction() {
   function buttonFunction() {
     const buttonsNode = document.querySelector(".buttons");
-    for (let num = 0; num < 4; num++) {
+    for (let num = 0; num < 3; num++) {
       const button = document.createElement("button");
       button.setAttribute("class", "btn");
       const names = ["size-btn", "reset-btn", "color-btn"];
