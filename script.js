@@ -62,12 +62,13 @@ function drawingFunction() {
       //cheque soon
       boxes.forEach((div) => {
         div.addEventListener("mouseover", () => {
-          div.style.backgroundColor = "black";
+          div.style.background = "black";
         });
       });
     }
     document.getElementById("reset-btn").addEventListener("click", () => {
-      boxes.forEach((div) => {
+      let newBoxes = document.querySelectorAll(".box");
+      newBoxes.forEach((div) => {
         div.style.backgroundColor = "white";
       });
       boxes.forEach((div) => {

@@ -1,9 +1,35 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #413db8;
+  background: linear-gradient(
+    90deg,
+    rgba(65, 61, 184, 1) 0%,
+    rgba(38, 38, 166, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+.title {
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.container,
+.buttons {
+  margin-top: 50px;
+}
+
 .container {
   display: flex;
   height: 500px;
   width: 500px;
   border: 2px solid black;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 .box {
   box-sizing: border-box;
@@ -11,4 +37,21 @@
   display: flex;
   width: 6.25%;
   height: 6.25%;
+  background: radial-gradient(circle, rgba(148, 187, 233, 1) 100%);
+}
+
+.buttons {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.btn {
+  display: flex;
+  padding: 10px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px radial-gradient(circle, rgba(148, 187, 233, 1) 100%);
+  background: radial-gradient(circle, rgba(148, 187, 233, 1) 100%);
 }
