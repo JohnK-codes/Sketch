@@ -10,12 +10,12 @@ const boxes = document.querySelectorAll(".box");
 function drawingFunction() {
   function buttonFunction() {
     const buttonsNode = document.querySelector(".buttons");
-    for (let num = 0; num < 3; num++) {
+    for (let num = 0; num < 4; num++) {
       const button = document.createElement("button");
       button.setAttribute("class", "btn");
-      const names = ["size-btn", "reset-btn", "color-btn"];
+      const names = ["size-btn", "reset-btn", "color-btn", "grid-btn"];
       button.setAttribute("id", names[num]);
-      const textNames = ["Size", "Reset", "Rainbow Mode"];
+      const textNames = ["Size", "Reset", "Rainbow Mode", "Grid off"];
       button.textContent = textNames[num];
       buttonsNode.appendChild(button);
     }
@@ -69,13 +69,31 @@ function drawingFunction() {
     document.getElementById("reset-btn").addEventListener("click", () => {
       let newBoxes = document.querySelectorAll(".box");
       newBoxes.forEach((div) => {
-        div.style.backgroundColor = "white";
+        div.style.background =
+          "radial-gradient(circle, rgba(148, 187, 233, 1) 100%)";
       });
       boxes.forEach((div) => {
         div.addEventListener("mouseover", () => {
           div.style.backgroundColor = "black";
         });
       });
+    });
+    let active = false;
+
+    document.getElementById("grid-btn").addEventListener("click", () => {
+      let newBoxes = document.querySelectorAll(".box");
+      active = !active;
+      if (active === false) {
+        newBoxes.forEach((div) => {
+          div.style.border = "none";
+          document.getElementById("grid-btn").textContent = "Grid on";
+        });
+      } else {
+        newBoxes.forEach((div) => {
+          div.style.border = "0.01px solid black";
+          document.getElementById("grid-btn").textContent = "Grid off";
+        });
+      }
     });
   }
 
