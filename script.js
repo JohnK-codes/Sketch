@@ -36,7 +36,7 @@ function drawingFunction() {
         div.style.height = ((500 / message) * 100) / 500 + "%";
         div.style.width = ((500 / message) * 100) / 500 + "%";
         div.addEventListener("mouseover", () => {
-          div.style.backgroundColor = "black";
+          div.style.background = "black";
         });
       }
     });
@@ -59,23 +59,18 @@ function drawingFunction() {
     });
 
     {
-      //cheque soon
-      boxes.forEach((div) => {
-        div.addEventListener("mouseover", () => {
-          div.style.background = "black";
+      let newBoxes = document.querySelectorAll(".box");
+      newBoxes.forEach((box) => {
+        box.addEventListener("mouseover", () => {
+          box.style.background = "black";
         });
       });
     }
     document.getElementById("reset-btn").addEventListener("click", () => {
       let newBoxes = document.querySelectorAll(".box");
-      newBoxes.forEach((div) => {
-        div.style.background =
+      newBoxes.forEach((box) => {
+        box.style.background =
           "radial-gradient(circle, rgba(148, 187, 233, 1) 100%)";
-      });
-      boxes.forEach((div) => {
-        div.addEventListener("mouseover", () => {
-          div.style.backgroundColor = "black";
-        });
       });
     });
     let active = false;
